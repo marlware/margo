@@ -41,16 +41,13 @@ So you can watch new videos show up while you run the stress test below.
 
 ## Why these technologies
 
-Every tool here earns its spot. Here's what each one does for Margo.
-
-- **Java and Spring Boot** make it quick to build a web service that checks and stores videos, and Java is a solid choice for services that need to stay up
-- **Kafka** lets Margo announce a result once, without needing to know who's listening
-- Kafka also keeps the announcements, so a service that was offline can catch up later
-- **React** keeps the dashboard in step with the data as it changes
-- **TypeScript** catches mistakes, like a missing field, before the page ever runs
-- **Vite** gives the dashboard a fast dev server, and forwards calls to Margo so the browser doesn't complain
-- **Docker Compose** starts Kafka, Redis, and Flink with one command, so you don't install them by hand
-- **Node** runs the stress-test script without any extra setup
+- **Java and Spring Boot** make web services quick to build
+- **Kafka** lets Margo announce results without knowing who's listening
+- **React** keeps the dashboard up to date
+- **TypeScript** catches mistakes before the page runs
+- **Vite** gives the dashboard a fast dev server
+- **Docker Compose** starts Kafka, Redis, and Flink in one command
+- **Node** runs the stress test
 
 ## Trying it out
 

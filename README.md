@@ -12,20 +12,6 @@ Margo is one of three small projects. Together, they pretend to be a video strea
 - **[Edith](https://github.com/marlware/edith)** picks which ad to show and counts how many times each ad was seen
 - **[Agnes](https://github.com/marlware/agnes)** streams the videos to viewers and plays the ads
 
-## How all three fit together
-
-Here's the whole system in one picture. Follow it from top to bottom.
-
-<img src="docs/system.svg" alt="How Margo, Agnes, and Edith connect through Kafka, with the technologies each one uses">
-
-- Margo checks each video, then announces the approved ones on Kafka (`asset-updates`)
-- Agnes hears those announcements and streams the videos to the Android app
-- Agnes asks Edith for an ad before each video plays
-- When the ad finishes, Agnes drops a note on Kafka (`ad-impressions`)
-- Edith reads those notes, and a Flink job counts the views for each ad
-- Edith keeps its viewers, ads, and counts in Redis
-- Docker Compose runs Kafka, Redis, and Flink
-
 ## So what does Margo do
 
 Margo is like a bouncer for the video library. Every new video gets checked at the door.

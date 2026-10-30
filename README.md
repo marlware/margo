@@ -26,3 +26,7 @@ React + TypeScript view of asset status and validation failures.
 ## Load test
 
 `node scripts/load-assets.mjs [count]` - ingests 10,000 assets by default (every 10th is invalid). Needs Margo and Kafka running.
+
+## Flink
+
+The compose file also runs a Flink 2.3 cluster (UI on :8083). Kafka has two listeners: `localhost:9092` for apps on this machine and `kafka:19092` for containers. The job itself lives in `edith/flink`.

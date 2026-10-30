@@ -6,3 +6,8 @@ Media ingest service. Validates simulated video assets and marks them APPROVED o
 - `GET /assets`, `GET /assets/{id}` - read assets
 
 Runs on port 8081: `./mvnw spring-boot:run`
+
+## Kafka
+
+Every ingested asset is published to the `asset-updates` topic (Agnes consumes it).
+Start Kafka first: `docker compose up -d`

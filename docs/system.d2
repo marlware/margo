@@ -1,0 +1,63 @@
+# Regenerate: d2 --layout elk --pad 30 docs/system.d2 docs/system.svg
+direction: down
+**.style.border-radius: 14
+**.style.font-size: 26
+
+margo: Margo {
+  grid-rows: 1
+  grid-gap: 24
+  dashboard: Dashboard {
+    grid-rows: 1
+    react: React {shape: image; icon: https://cdn.simpleicons.org/react; width: 48; height: 48}
+    ts: TypeScript {shape: image; icon: https://cdn.simpleicons.org/typescript; width: 48; height: 48}
+  }
+  service: Checks videos {
+    grid-rows: 1
+    java: Java {shape: image; icon: https://cdn.simpleicons.org/openjdk; width: 48; height: 48}
+    spring: Spring Boot {shape: image; icon: https://cdn.simpleicons.org/springboot; width: 48; height: 48}
+  }
+}
+
+assets: asset-updates {shape: image; icon: https://cdn.simpleicons.org/apachekafka; width: 64; height: 64}
+
+agnes: Agnes {
+  grid-rows: 1
+  grid-gap: 24
+  server: Streams videos {
+    grid-rows: 1
+    go: Go {shape: image; icon: https://cdn.simpleicons.org/go; width: 48; height: 48}
+    ffmpeg: ffmpeg {shape: image; icon: https://cdn.simpleicons.org/ffmpeg; width: 48; height: 48}
+  }
+  phone: Android app {
+    grid-rows: 1
+    kotlin: Kotlin {shape: image; icon: https://cdn.simpleicons.org/kotlin; width: 48; height: 48}
+    android: Android {shape: image; icon: https://cdn.simpleicons.org/android; width: 48; height: 48}
+  }
+}
+
+impressions: ad-impressions {shape: image; icon: https://cdn.simpleicons.org/apachekafka; width: 64; height: 64}
+
+edith: Edith {
+  grid-rows: 1
+  grid-gap: 24
+  counting: Counts views {
+    grid-rows: 1
+    scala: Scala {shape: image; icon: https://cdn.simpleicons.org/scala; width: 48; height: 48}
+    flink: Flink {shape: image; icon: https://cdn.simpleicons.org/apacheflink; width: 48; height: 48}
+  }
+  service: Picks ads {
+    grid-rows: 1
+    java: Java {shape: image; icon: https://cdn.simpleicons.org/openjdk; width: 48; height: 48}
+    spring: Spring Boot {shape: image; icon: https://cdn.simpleicons.org/springboot; width: 48; height: 48}
+  }
+  redis: Redis {shape: image; icon: https://cdn.simpleicons.org/redis; width: 56; height: 56}
+}
+
+
+margo -> assets: approved videos
+assets -> agnes
+agnes -> impressions: ad was seen
+impressions -> edith
+agnes -> edith: asks for an ad
+
+(** -> **)[*].style.font-size: 22

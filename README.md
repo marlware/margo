@@ -22,3 +22,7 @@ React + TypeScript view of asset status and validation failures.
 
 - `cd dashboard && npm install && npm run dev` - http://localhost:5173
 - Proxies `/assets` to Margo on :8081
+
+## Load test
+
+`node scripts/load-assets.mjs [count]` - ingests 10,000 assets by default (every 10th is invalid). Needs Margo and Kafka running.

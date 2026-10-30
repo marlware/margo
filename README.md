@@ -51,13 +51,7 @@ So you can watch new videos show up while you run the stress test below.
 
 Here's how the pieces connect.
 
-```mermaid
-flowchart LR
-    Dashboard["React + TypeScript dashboard"] --> Margo["Margo: Java + Spring Boot"]
-    Margo -->|approved videos| Kafka["Kafka"]
-    Kafka --> Agnes["Agnes"]
-    Docker["Docker Compose"] -.-> Kafka
-```
+<img src="docs/diagram.svg" alt="How the dashboard, Margo, Kafka, and Agnes connect">
 
 ## Trying it out
 

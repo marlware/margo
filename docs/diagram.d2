@@ -1,0 +1,24 @@
+# Regenerate: d2 --layout elk --pad 30 docs/diagram.d2 docs/diagram.svg
+direction: right
+*.style.border-radius: 14
+
+dashboard: Dashboard {
+  grid-rows: 1
+  react: React {shape: image; icon: https://cdn.simpleicons.org/react; width: 56; height: 56}
+  ts: TypeScript {shape: image; icon: https://cdn.simpleicons.org/typescript; width: 56; height: 56}
+}
+
+margo: Margo {
+  grid-rows: 1
+  java: Java {shape: image; icon: https://cdn.simpleicons.org/openjdk; width: 56; height: 56}
+  spring: Spring Boot {shape: image; icon: https://cdn.simpleicons.org/springboot; width: 56; height: 56}
+}
+
+kafka: Kafka {shape: image; icon: https://cdn.simpleicons.org/apachekafka; width: 72; height: 72}
+agnes: Agnes
+compose: Docker Compose {shape: image; icon: https://cdn.simpleicons.org/docker; width: 56; height: 56}
+
+dashboard -> margo
+margo -> kafka: approved videos
+kafka -> agnes
+compose -> kafka: {style.stroke-dash: 4}

@@ -1,10 +1,11 @@
 # Margo
 
-Media Ingest Service
+- media ingest service
+- full name: Media Asset Routing & Governance Orchestrator
 
 ## What's going on here
 
-Margo is one of three small projects. Together, they pretend to be a video streaming service. Think of a tiny version of what's behind Netflix or YouTube. Everything is simulated, so the "videos" and "ads" are just test patterns. But the pieces really do talk to each other.
+Margo is one of three small projects. Together, they pretend to be a video streaming service. Everything is simulated, so the "videos" and "ads" are just test patterns. But the pieces really do talk to each other.
 
 - **Margo** (this one) checks new videos before anyone can watch them
 - **[Edith](https://github.com/marlware/edith)** picks which ad to show and counts how many times each ad was seen
@@ -36,6 +37,19 @@ The dashboard is a small web page. It shows what's happening in the library.
 - Refreshes itself every few seconds
 
 So you can watch new videos show up while you run the stress test below.
+
+## Why these technologies
+
+Every tool here earns its spot. Here's what each one does for Margo.
+
+- **Java and Spring Boot** make it quick to build a web service that checks and stores videos, and Java is a solid choice for services that need to stay up
+- **Kafka** lets Margo announce a result once, without needing to know who's listening
+- Kafka also keeps the announcements, so a service that was offline can catch up later
+- **React** keeps the dashboard in step with the data as it changes
+- **TypeScript** catches mistakes, like a missing field, before the page ever runs
+- **Vite** gives the dashboard a fast dev server, and forwards calls to Margo so the browser doesn't complain
+- **Docker Compose** starts Kafka, Redis, and Flink with one command, so you don't install them by hand
+- **Node** runs the stress-test script without any extra setup
 
 ## Trying it out
 

@@ -49,6 +49,16 @@ So you can watch new videos show up while you run the stress test below.
 - **Docker Compose** starts Kafka, Redis, and Flink in one command
 - **Node** runs the stress test
 
+Here's how the pieces connect.
+
+```mermaid
+flowchart LR
+    Dashboard["React + TypeScript dashboard"] --> Margo["Margo: Java + Spring Boot"]
+    Margo -->|approved videos| Kafka["Kafka"]
+    Kafka --> Agnes["Agnes"]
+    Docker["Docker Compose"] -.-> Kafka
+```
+
 ## Trying it out
 
 Here's what you'll need.

@@ -1,7 +1,8 @@
 # Margo
-
 - media ingest service
 - full name: Media Asset Routing & Governance Orchestrator
+
+<img src="/margo.gif" width="200" alt="App Demo">
 
 ## What's going on here
 

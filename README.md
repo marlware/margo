@@ -49,8 +49,6 @@ So you can watch new videos show up while you run the stress test below.
 - **Docker Compose** starts Kafka, Redis, and Flink in one command
 - **Node** runs the stress test
 
-Here's how the pieces connect.
-
 <img src="docs/diagram.svg" alt="How the dashboard, Margo, Kafka, and Agnes connect">
 
 ## Trying it out
